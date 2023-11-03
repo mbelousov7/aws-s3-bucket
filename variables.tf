@@ -98,6 +98,12 @@ variable "ignore_public_acls" {
   description = "Set to `false` to disable the ignoring of public access lists on the bucket"
 }
 
+variable "aws_s3_bucket_acl" {
+  type        = string
+  default     = "private"
+  description = "Set to `private` to create aws_s3_bucket_acl resource"
+}
+
 variable "restrict_public_buckets" {
   type        = bool
   default     = true

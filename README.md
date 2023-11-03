@@ -2,6 +2,10 @@
 
 Terraform module to create S3 bucket. It has support for versioning, lifecycles, replication, encryption, bucket object policies.
 
+bucket names examples:
+```
+a204558-stackname-bucket-data-us-east-1-apt-dev
+a204558-stackname-bucket-logs-us-east-1-apt-dev
 
 ```
 
@@ -88,6 +92,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_account_id"></a> [account\_id](#input\_account\_id) | account short name | `string` | n/a | yes |
+| <a name="input_aws_s3_bucket_acl"></a> [aws\_s3\_bucket\_acl](#input\_aws\_s3\_bucket\_acl) | Set to `private` to create aws\_s3\_bucket\_acl resource | `string` | `"private"` | no |
 | <a name="input_block_public_acls"></a> [block\_public\_acls](#input\_block\_public\_acls) | Set to `false` to disable the blocking of new public access lists on the bucket | `bool` | `true` | no |
 | <a name="input_block_public_policy"></a> [block\_public\_policy](#input\_block\_public\_policy) | Set to `false` to disable the blocking of new public policies on the bucket | `bool` | `true` | no |
 | <a name="input_bucket_key_enabled"></a> [bucket\_key\_enabled](#input\_bucket\_key\_enabled) | Set this to true to use Amazon S3 Bucket Keys for SSE-KMS, which reduce the cost of AWS KMS requests.<br>For more information, see: https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html | `bool` | `false` | no |

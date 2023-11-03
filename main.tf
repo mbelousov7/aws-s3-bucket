@@ -19,6 +19,7 @@ resource "aws_s3_bucket" "default" {
 }
 
 resource "aws_s3_bucket_acl" "default" {
+  count  = var.aws_s3_bucket_acl == "private" ? 1 : 0
   bucket = aws_s3_bucket.default.id
   acl    = "private"
 }
